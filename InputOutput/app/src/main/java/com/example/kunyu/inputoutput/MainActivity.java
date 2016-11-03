@@ -20,13 +20,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String string = mActivityMainBinding.editText.getText().toString();
                 if(string.contains("hello")){
-                    mActivityMainBinding.text.setText("我很好啦吃大便啦");
+                    mActivityMainBinding.text.setText("我很好啦不用煩惱");
                 }
                 else
                 {
                     mActivityMainBinding.text.setText(string);
                 }
-//                mActivityMainBinding.text.setText("\n" + string);
+
                 mActivityMainBinding.editText.setText("");
             }
         });
