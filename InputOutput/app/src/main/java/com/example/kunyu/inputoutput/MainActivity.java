@@ -9,6 +9,7 @@ import com.example.kunyu.inputoutput.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding mActivityMainBinding;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,18 +19,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String string = mActivityMainBinding.editText.getText().toString();
-//                if(string.equals("你好麼")){
-//                    mActivityMainBinding.text.setText("我很好啦吃大便啦");
-//                }
-//                else if(string.contains("搞屁"))
-//                {
-//                    mActivityMainBinding.text.setText("可以不要罵髒話麼");
-//                }
-//                else
-//                {
-//                    mActivityMainBinding.text.setText(string);
-//                }
-                mActivityMainBinding.text.append("\n" + string);
+                if(string.contains("hello")){
+                    mActivityMainBinding.text.setText("我很好啦吃大便啦");
+                }
+                else
+                {
+                    mActivityMainBinding.text.setText(string);
+                }
+//                mActivityMainBinding.text.setText("\n" + string);
                 mActivityMainBinding.editText.setText("");
             }
         });
